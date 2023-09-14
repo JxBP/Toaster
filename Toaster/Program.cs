@@ -1,4 +1,7 @@
+using System;
 using System.Globalization;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Toaster
 {
@@ -32,7 +35,8 @@ namespace Toaster
 
             var tokenSource = StartToasting(config);
 
-            ApplicationConfiguration.Initialize();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ConfigForm(config,
                 onSave: (newConfig) =>
                 {

@@ -1,4 +1,7 @@
-﻿namespace Toaster
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Toaster
 {
     partial class ConfigForm
     {
