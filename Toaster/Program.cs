@@ -7,27 +7,29 @@ namespace Toaster
         [STAThread]
         static void Main()
         {
-            var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-            var title = Languages.GetToastTitle(lang);
-            if (title == null)
+            var config = Config.Load();
+
+            if (config.ToastTitle == null || config.ToastTitle.Length == 0)
             {
-                var dialogResult = MessageBox.Show(
-                    $"Automatic configuration of the notification title is not supporet for {lang} yet!\n\n" +
-                    "For more information and for a way to fix this see the project's README.",
-                    "Toaster - Unsupported Language",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Warning);
-                if (dialogResult == DialogResult.Cancel)
+                var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+                var title = Languages.GetToastTitle(lang);
+                if (title == null)
                 {
-                    return;
+                    var dialogResult = MessageBox.Show(
+                        $"Automatic configuration of the notification title is not supporet for {lang} yet!\n\n" +
+                        "For more information and for a way to fix this see the project's README.",
+                        "Toaster - Unsupported Language",
+                        MessageBoxButtons.OKCancel,
+                        MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Cancel)
+                    {
+                        return;
+                    }
                 }
+                config.ToastTitle = title;
+                config.Save();
             }
 
-            var config = new Config()
-            {
-                ToastTitle = title,
-                Corner = "Top Left",
-            };
             var tokenSource = StartToasting(config);
 
             ApplicationConfiguration.Initialize();
@@ -35,6 +37,7 @@ namespace Toaster
                 onSave: (newConfig) =>
                 {
                     config = newConfig;
+                    config.Save();
                     tokenSource.Cancel();
                     tokenSource = StartToasting(config);
                 },
