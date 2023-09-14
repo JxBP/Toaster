@@ -28,8 +28,11 @@ namespace Toaster
             // background most of the time.
             FormClosing += (sender, e) =>
             {
-                e.Cancel = true;
-                hideInTray();
+                if (e.CloseReason == CloseReason.UserClosing)
+                {
+                    e.Cancel = true;
+                    hideInTray();
+                }
             };
             Resize += OnMinimize;
 
