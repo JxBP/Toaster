@@ -61,21 +61,31 @@ namespace Toaster
             hideInTray();
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
+        private void stopButton_Click(object sender, EventArgs e)
         {
-            hideInTray();
+            onStop();
         }
 
         private void trayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Show();
-            WindowState = FormWindowState.Normal;
-            ShowInTaskbar = true;
+            openForm();
+        }
+
+        private void openFormMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm();
         }
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
             onStop();
+        }
+
+        private void openForm()
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+            ShowInTaskbar = true;
         }
 
         private void hideInTray()

@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             rootLayout = new TableLayoutPanel();
-            okButton = new Button();
             configGroupBox = new GroupBox();
             configTableLayout = new TableLayoutPanel();
             inputsTable = new TableLayoutPanel();
@@ -46,8 +45,12 @@
             yOffsetLabel = new Label();
             xOffSetLabel = new Label();
             inputOffsetX = new NumericUpDown();
+            buttonsPanel = new Panel();
+            stopButton = new Button();
+            okButton = new Button();
             trayIcon = new NotifyIcon(components);
             trayContextMenu = new ContextMenuStrip(components);
+            openFormMenuItem = new ToolStripMenuItem();
             exitMenuItem = new ToolStripMenuItem();
             rootLayout.SuspendLayout();
             configGroupBox.SuspendLayout();
@@ -58,6 +61,7 @@
             offsetsTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)inputOffsetY).BeginInit();
             ((System.ComponentModel.ISupportInitialize)inputOffsetX).BeginInit();
+            buttonsPanel.SuspendLayout();
             trayContextMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,8 +69,8 @@
             // 
             rootLayout.ColumnCount = 1;
             rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            rootLayout.Controls.Add(okButton, 0, 1);
             rootLayout.Controls.Add(configGroupBox, 0, 0);
+            rootLayout.Controls.Add(buttonsPanel, 0, 1);
             rootLayout.Dock = DockStyle.Fill;
             rootLayout.Location = new Point(0, 0);
             rootLayout.Margin = new Padding(4, 3, 4, 3);
@@ -77,18 +81,6 @@
             rootLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
             rootLayout.Size = new Size(380, 429);
             rootLayout.TabIndex = 0;
-            // 
-            // okButton
-            // 
-            okButton.Dock = DockStyle.Left;
-            okButton.Location = new Point(4, 389);
-            okButton.Margin = new Padding(4, 3, 4, 3);
-            okButton.Name = "okButton";
-            okButton.Size = new Size(88, 37);
-            okButton.TabIndex = 2;
-            okButton.Text = "Ok";
-            okButton.UseVisualStyleBackColor = true;
-            okButton.Click += okButton_Click;
             // 
             // configGroupBox
             // 
@@ -280,25 +272,64 @@
             inputOffsetX.Size = new Size(219, 23);
             inputOffsetX.TabIndex = 3;
             // 
+            // buttonsPanel
+            // 
+            buttonsPanel.Controls.Add(stopButton);
+            buttonsPanel.Controls.Add(okButton);
+            buttonsPanel.Dock = DockStyle.Fill;
+            buttonsPanel.Location = new Point(3, 389);
+            buttonsPanel.Name = "buttonsPanel";
+            buttonsPanel.Size = new Size(374, 37);
+            buttonsPanel.TabIndex = 2;
+            // 
+            // stopButton
+            // 
+            stopButton.Dock = DockStyle.Right;
+            stopButton.Location = new Point(286, 0);
+            stopButton.Margin = new Padding(4, 3, 4, 3);
+            stopButton.Name = "stopButton";
+            stopButton.Size = new Size(88, 37);
+            stopButton.TabIndex = 4;
+            stopButton.Text = "Stop";
+            stopButton.UseVisualStyleBackColor = true;
+            stopButton.Click += stopButton_Click;
+            // 
+            // okButton
+            // 
+            okButton.Dock = DockStyle.Left;
+            okButton.Location = new Point(0, 0);
+            okButton.Margin = new Padding(4, 3, 4, 3);
+            okButton.Name = "okButton";
+            okButton.Size = new Size(88, 37);
+            okButton.TabIndex = 3;
+            okButton.Text = "Ok";
+            okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
+            // 
             // trayIcon
             // 
-            trayIcon.BalloonTipText = "Gotta toast 'em all!";
-            trayIcon.BalloonTipTitle = "Toaster";
             trayIcon.ContextMenuStrip = trayContextMenu;
-            trayIcon.Text = "Toaster";
+            trayIcon.Text = "s";
+            trayIcon.Visible = true;
             trayIcon.MouseDoubleClick += trayIcon_MouseDoubleClick;
-	    trayIcon.Visible = true;
             // 
             // trayContextMenu
             // 
-            trayContextMenu.Items.AddRange(new ToolStripItem[] { exitMenuItem });
+            trayContextMenu.Items.AddRange(new ToolStripItem[] { openFormMenuItem, exitMenuItem });
             trayContextMenu.Name = "contextMenuStrip1";
-            trayContextMenu.Size = new Size(94, 26);
+            trayContextMenu.Size = new Size(181, 48);
+            // 
+            // openFormMenuItem
+            // 
+            openFormMenuItem.Name = "openFormMenuItem";
+            openFormMenuItem.Size = new Size(180, 22);
+            openFormMenuItem.Text = "Open Configuration";
+            openFormMenuItem.Click += openFormMenuItem_Click;
             // 
             // exitMenuItem
             // 
             exitMenuItem.Name = "exitMenuItem";
-            exitMenuItem.Size = new Size(93, 22);
+            exitMenuItem.Size = new Size(180, 22);
             exitMenuItem.Text = "Exit";
             exitMenuItem.Click += exitMenuItem_Click;
             // 
@@ -322,6 +353,7 @@
             offsetsTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)inputOffsetY).EndInit();
             ((System.ComponentModel.ISupportInitialize)inputOffsetX).EndInit();
+            buttonsPanel.ResumeLayout(false);
             trayContextMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -347,6 +379,9 @@
         private NotifyIcon trayIcon;
         private ContextMenuStrip trayContextMenu;
         private ToolStripMenuItem exitMenuItem;
+        private ToolStripMenuItem openFormMenuItem;
+        private Panel buttonsPanel;
         private Button okButton;
+        private Button stopButton;
     }
 }
