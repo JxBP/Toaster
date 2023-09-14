@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Toaster
 {
     internal static class Program
@@ -5,10 +7,25 @@ namespace Toaster
         [STAThread]
         static void Main()
         {
-            // TODO: Try setting ToastTitle based on locale setting.
+            var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+            var title = Languages.GetToastTitle(lang);
+            if (title == null)
+            {
+                var dialogResult = MessageBox.Show(
+                    $"Automatic configuration of the notification title is not supporet for {lang} yet!\n\n" +
+                    "For more information and for a way to fix this see the project's README.",
+                    "Toaster - Unsupported Language",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+
             var config = new Config()
             {
-                ToastTitle = "New Notification",
+                ToastTitle = title,
                 Corner = "Top Left",
             };
             var tokenSource = StartToasting(config);
