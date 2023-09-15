@@ -40,8 +40,6 @@ namespace Toaster
             };
             Resize += OnMinimize;
 
-            trayIcon.Icon = SystemIcons.Application;
-
             // Hide initially
             hideInTray();
         }

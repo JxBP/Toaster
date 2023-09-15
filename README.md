@@ -1,3 +1,5 @@
+![Logo](screenshots/toaster.png)
+
 # Toaster
 
 Put toast notifications where you want them.

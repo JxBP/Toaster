@@ -31,334 +31,342 @@ namespace Toaster
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            rootLayout = new TableLayoutPanel();
-            configGroupBox = new GroupBox();
-            configTableLayout = new TableLayoutPanel();
-            inputsTable = new TableLayoutPanel();
-            titleInputLabel = new Label();
-            inputTitle = new TextBox();
-            timeoutInputLabel = new Label();
-            inputTimeout = new NumericUpDown();
-            cornerLabel = new Label();
-            inputCorner = new ComboBox();
-            offsetsGroupBox = new GroupBox();
-            offsetsTableLayout = new TableLayoutPanel();
-            inputOffsetY = new NumericUpDown();
-            yOffsetLabel = new Label();
-            xOffSetLabel = new Label();
-            inputOffsetX = new NumericUpDown();
-            buttonsPanel = new Panel();
-            stopButton = new Button();
-            okButton = new Button();
-            trayIcon = new NotifyIcon(components);
-            trayContextMenu = new ContextMenuStrip(components);
-            openFormMenuItem = new ToolStripMenuItem();
-            exitMenuItem = new ToolStripMenuItem();
-            rootLayout.SuspendLayout();
-            configGroupBox.SuspendLayout();
-            configTableLayout.SuspendLayout();
-            inputsTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)inputTimeout).BeginInit();
-            offsetsGroupBox.SuspendLayout();
-            offsetsTableLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)inputOffsetY).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)inputOffsetX).BeginInit();
-            buttonsPanel.SuspendLayout();
-            trayContextMenu.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
+            this.rootLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.configGroupBox = new System.Windows.Forms.GroupBox();
+            this.configTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.inputsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.titleInputLabel = new System.Windows.Forms.Label();
+            this.inputTitle = new System.Windows.Forms.TextBox();
+            this.timeoutInputLabel = new System.Windows.Forms.Label();
+            this.inputTimeout = new System.Windows.Forms.NumericUpDown();
+            this.cornerLabel = new System.Windows.Forms.Label();
+            this.inputCorner = new System.Windows.Forms.ComboBox();
+            this.offsetsGroupBox = new System.Windows.Forms.GroupBox();
+            this.offsetsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.inputOffsetY = new System.Windows.Forms.NumericUpDown();
+            this.yOffsetLabel = new System.Windows.Forms.Label();
+            this.xOffSetLabel = new System.Windows.Forms.Label();
+            this.inputOffsetX = new System.Windows.Forms.NumericUpDown();
+            this.buttonsPanel = new System.Windows.Forms.Panel();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.openFormMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rootLayout.SuspendLayout();
+            this.configGroupBox.SuspendLayout();
+            this.configTableLayout.SuspendLayout();
+            this.inputsTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTimeout)).BeginInit();
+            this.offsetsGroupBox.SuspendLayout();
+            this.offsetsTableLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputOffsetY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputOffsetX)).BeginInit();
+            this.buttonsPanel.SuspendLayout();
+            this.trayContextMenu.SuspendLayout();
+            this.SuspendLayout();
             // 
             // rootLayout
             // 
-            rootLayout.ColumnCount = 1;
-            rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            rootLayout.Controls.Add(configGroupBox, 0, 0);
-            rootLayout.Controls.Add(buttonsPanel, 0, 1);
-            rootLayout.Dock = DockStyle.Fill;
-            rootLayout.Location = new Point(0, 0);
-            rootLayout.Margin = new Padding(4, 3, 4, 3);
-            rootLayout.Name = "rootLayout";
-            rootLayout.RowCount = 2;
-            rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
-            rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rootLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
-            rootLayout.Size = new Size(380, 429);
-            rootLayout.TabIndex = 0;
+            this.rootLayout.ColumnCount = 1;
+            this.rootLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.rootLayout.Controls.Add(this.configGroupBox, 0, 0);
+            this.rootLayout.Controls.Add(this.buttonsPanel, 0, 1);
+            this.rootLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rootLayout.Location = new System.Drawing.Point(0, 0);
+            this.rootLayout.Name = "rootLayout";
+            this.rootLayout.RowCount = 2;
+            this.rootLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.rootLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.rootLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.rootLayout.Size = new System.Drawing.Size(326, 372);
+            this.rootLayout.TabIndex = 0;
             // 
             // configGroupBox
             // 
-            configGroupBox.Controls.Add(configTableLayout);
-            configGroupBox.Dock = DockStyle.Fill;
-            configGroupBox.Location = new Point(4, 3);
-            configGroupBox.Margin = new Padding(4, 3, 4, 3);
-            configGroupBox.Name = "configGroupBox";
-            configGroupBox.Padding = new Padding(4, 3, 4, 3);
-            configGroupBox.Size = new Size(372, 380);
-            configGroupBox.TabIndex = 1;
-            configGroupBox.TabStop = false;
-            configGroupBox.Text = "Config";
+            this.configGroupBox.Controls.Add(this.configTableLayout);
+            this.configGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.configGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.configGroupBox.Name = "configGroupBox";
+            this.configGroupBox.Size = new System.Drawing.Size(320, 328);
+            this.configGroupBox.TabIndex = 1;
+            this.configGroupBox.TabStop = false;
+            this.configGroupBox.Text = "Config";
             // 
             // configTableLayout
             // 
-            configTableLayout.ColumnCount = 1;
-            configTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            configTableLayout.Controls.Add(inputsTable, 0, 0);
-            configTableLayout.Controls.Add(offsetsGroupBox, 0, 1);
-            configTableLayout.Dock = DockStyle.Fill;
-            configTableLayout.Location = new Point(4, 19);
-            configTableLayout.Margin = new Padding(4, 3, 4, 3);
-            configTableLayout.Name = "configTableLayout";
-            configTableLayout.RowCount = 2;
-            configTableLayout.RowStyles.Add(new RowStyle());
-            configTableLayout.RowStyles.Add(new RowStyle());
-            configTableLayout.Size = new Size(364, 358);
-            configTableLayout.TabIndex = 4;
+            this.configTableLayout.ColumnCount = 1;
+            this.configTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.configTableLayout.Controls.Add(this.inputsTable, 0, 0);
+            this.configTableLayout.Controls.Add(this.offsetsGroupBox, 0, 1);
+            this.configTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.configTableLayout.Location = new System.Drawing.Point(3, 16);
+            this.configTableLayout.Name = "configTableLayout";
+            this.configTableLayout.RowCount = 2;
+            this.configTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.configTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.configTableLayout.Size = new System.Drawing.Size(314, 309);
+            this.configTableLayout.TabIndex = 4;
             // 
             // inputsTable
             // 
-            inputsTable.ColumnCount = 2;
-            inputsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
-            inputsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
-            inputsTable.Controls.Add(titleInputLabel, 0, 0);
-            inputsTable.Controls.Add(inputTitle, 1, 0);
-            inputsTable.Controls.Add(timeoutInputLabel, 0, 1);
-            inputsTable.Controls.Add(inputTimeout, 1, 1);
-            inputsTable.Controls.Add(cornerLabel, 0, 2);
-            inputsTable.Controls.Add(inputCorner, 1, 2);
-            inputsTable.Dock = DockStyle.Fill;
-            inputsTable.Location = new Point(4, 3);
-            inputsTable.Margin = new Padding(4, 3, 4, 3);
-            inputsTable.Name = "inputsTable";
-            inputsTable.RowCount = 3;
-            inputsTable.RowStyles.Add(new RowStyle());
-            inputsTable.RowStyles.Add(new RowStyle());
-            inputsTable.RowStyles.Add(new RowStyle());
-            inputsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
-            inputsTable.Size = new Size(356, 104);
-            inputsTable.TabIndex = 4;
+            this.inputsTable.ColumnCount = 2;
+            this.inputsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.inputsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.inputsTable.Controls.Add(this.titleInputLabel, 0, 0);
+            this.inputsTable.Controls.Add(this.inputTitle, 1, 0);
+            this.inputsTable.Controls.Add(this.timeoutInputLabel, 0, 1);
+            this.inputsTable.Controls.Add(this.inputTimeout, 1, 1);
+            this.inputsTable.Controls.Add(this.cornerLabel, 0, 2);
+            this.inputsTable.Controls.Add(this.inputCorner, 1, 2);
+            this.inputsTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputsTable.Location = new System.Drawing.Point(3, 3);
+            this.inputsTable.Name = "inputsTable";
+            this.inputsTable.RowCount = 3;
+            this.inputsTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputsTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputsTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.inputsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.inputsTable.Size = new System.Drawing.Size(308, 90);
+            this.inputsTable.TabIndex = 4;
             // 
             // titleInputLabel
             // 
-            titleInputLabel.AutoSize = true;
-            titleInputLabel.Dock = DockStyle.Fill;
-            titleInputLabel.Location = new Point(4, 0);
-            titleInputLabel.Margin = new Padding(4, 0, 4, 0);
-            titleInputLabel.Name = "titleInputLabel";
-            titleInputLabel.Size = new Size(116, 29);
-            titleInputLabel.TabIndex = 0;
-            titleInputLabel.Text = "Notification Title";
+            this.titleInputLabel.AutoSize = true;
+            this.titleInputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.titleInputLabel.Location = new System.Drawing.Point(3, 0);
+            this.titleInputLabel.Name = "titleInputLabel";
+            this.titleInputLabel.Size = new System.Drawing.Size(101, 26);
+            this.titleInputLabel.TabIndex = 0;
+            this.titleInputLabel.Text = "Notification Title";
             // 
             // inputTitle
             // 
-            inputTitle.Dock = DockStyle.Fill;
-            inputTitle.Location = new Point(128, 3);
-            inputTitle.Margin = new Padding(4, 3, 4, 3);
-            inputTitle.Name = "inputTitle";
-            inputTitle.Size = new Size(224, 23);
-            inputTitle.TabIndex = 1;
+            this.inputTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputTitle.Location = new System.Drawing.Point(110, 3);
+            this.inputTitle.Name = "inputTitle";
+            this.inputTitle.Size = new System.Drawing.Size(195, 20);
+            this.inputTitle.TabIndex = 1;
             // 
             // timeoutInputLabel
             // 
-            timeoutInputLabel.AutoSize = true;
-            timeoutInputLabel.Dock = DockStyle.Fill;
-            timeoutInputLabel.Location = new Point(4, 29);
-            timeoutInputLabel.Margin = new Padding(4, 0, 4, 0);
-            timeoutInputLabel.Name = "timeoutInputLabel";
-            timeoutInputLabel.Size = new Size(116, 29);
-            timeoutInputLabel.TabIndex = 2;
-            timeoutInputLabel.Text = "Timeout:";
+            this.timeoutInputLabel.AutoSize = true;
+            this.timeoutInputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeoutInputLabel.Location = new System.Drawing.Point(3, 26);
+            this.timeoutInputLabel.Name = "timeoutInputLabel";
+            this.timeoutInputLabel.Size = new System.Drawing.Size(101, 26);
+            this.timeoutInputLabel.TabIndex = 2;
+            this.timeoutInputLabel.Text = "Timeout:";
             // 
             // inputTimeout
             // 
-            inputTimeout.Dock = DockStyle.Fill;
-            inputTimeout.Location = new Point(128, 32);
-            inputTimeout.Margin = new Padding(4, 3, 4, 3);
-            inputTimeout.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            inputTimeout.Name = "inputTimeout";
-            inputTimeout.Size = new Size(224, 23);
-            inputTimeout.TabIndex = 3;
+            this.inputTimeout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputTimeout.Location = new System.Drawing.Point(110, 29);
+            this.inputTimeout.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.inputTimeout.Name = "inputTimeout";
+            this.inputTimeout.Size = new System.Drawing.Size(195, 20);
+            this.inputTimeout.TabIndex = 3;
             // 
             // cornerLabel
             // 
-            cornerLabel.AutoSize = true;
-            cornerLabel.Location = new Point(4, 58);
-            cornerLabel.Margin = new Padding(4, 0, 4, 0);
-            cornerLabel.Name = "cornerLabel";
-            cornerLabel.Size = new Size(46, 15);
-            cornerLabel.TabIndex = 4;
-            cornerLabel.Text = "Corner:";
+            this.cornerLabel.AutoSize = true;
+            this.cornerLabel.Location = new System.Drawing.Point(3, 52);
+            this.cornerLabel.Name = "cornerLabel";
+            this.cornerLabel.Size = new System.Drawing.Size(41, 13);
+            this.cornerLabel.TabIndex = 4;
+            this.cornerLabel.Text = "Corner:";
             // 
             // inputCorner
             // 
-            inputCorner.Dock = DockStyle.Fill;
-            inputCorner.FormattingEnabled = true;
-            inputCorner.Items.AddRange(new object[] { "Top Left", "Top Right", "Bottom Left", "Bottom Right" });
-            inputCorner.Location = new Point(128, 61);
-            inputCorner.Margin = new Padding(4, 3, 4, 3);
-            inputCorner.Name = "inputCorner";
-            inputCorner.Size = new Size(224, 23);
-            inputCorner.TabIndex = 5;
+            this.inputCorner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputCorner.FormattingEnabled = true;
+            this.inputCorner.Items.AddRange(new object[] {
+            "Top Left",
+            "Top Right",
+            "Bottom Left",
+            "Bottom Right"});
+            this.inputCorner.Location = new System.Drawing.Point(110, 55);
+            this.inputCorner.Name = "inputCorner";
+            this.inputCorner.Size = new System.Drawing.Size(195, 21);
+            this.inputCorner.TabIndex = 5;
             // 
             // offsetsGroupBox
             // 
-            offsetsGroupBox.Controls.Add(offsetsTableLayout);
-            offsetsGroupBox.Dock = DockStyle.Fill;
-            offsetsGroupBox.Location = new Point(4, 113);
-            offsetsGroupBox.Margin = new Padding(4, 3, 4, 3);
-            offsetsGroupBox.Name = "offsetsGroupBox";
-            offsetsGroupBox.Padding = new Padding(4, 3, 4, 3);
-            offsetsGroupBox.Size = new Size(356, 242);
-            offsetsGroupBox.TabIndex = 5;
-            offsetsGroupBox.TabStop = false;
-            offsetsGroupBox.Text = "Offsets";
+            this.offsetsGroupBox.Controls.Add(this.offsetsTableLayout);
+            this.offsetsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.offsetsGroupBox.Location = new System.Drawing.Point(3, 99);
+            this.offsetsGroupBox.Name = "offsetsGroupBox";
+            this.offsetsGroupBox.Size = new System.Drawing.Size(308, 212);
+            this.offsetsGroupBox.TabIndex = 5;
+            this.offsetsGroupBox.TabStop = false;
+            this.offsetsGroupBox.Text = "Offsets";
             // 
             // offsetsTableLayout
             // 
-            offsetsTableLayout.ColumnCount = 2;
-            offsetsTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
-            offsetsTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
-            offsetsTableLayout.Controls.Add(inputOffsetY, 1, 1);
-            offsetsTableLayout.Controls.Add(yOffsetLabel, 0, 1);
-            offsetsTableLayout.Controls.Add(xOffSetLabel, 0, 0);
-            offsetsTableLayout.Controls.Add(inputOffsetX, 1, 0);
-            offsetsTableLayout.Dock = DockStyle.Fill;
-            offsetsTableLayout.Location = new Point(4, 19);
-            offsetsTableLayout.Margin = new Padding(4, 3, 4, 3);
-            offsetsTableLayout.Name = "offsetsTableLayout";
-            offsetsTableLayout.RowCount = 2;
-            offsetsTableLayout.RowStyles.Add(new RowStyle());
-            offsetsTableLayout.RowStyles.Add(new RowStyle());
-            offsetsTableLayout.Size = new Size(348, 220);
-            offsetsTableLayout.TabIndex = 0;
+            this.offsetsTableLayout.ColumnCount = 2;
+            this.offsetsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.offsetsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.offsetsTableLayout.Controls.Add(this.inputOffsetY, 1, 1);
+            this.offsetsTableLayout.Controls.Add(this.yOffsetLabel, 0, 1);
+            this.offsetsTableLayout.Controls.Add(this.xOffSetLabel, 0, 0);
+            this.offsetsTableLayout.Controls.Add(this.inputOffsetX, 1, 0);
+            this.offsetsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.offsetsTableLayout.Location = new System.Drawing.Point(3, 16);
+            this.offsetsTableLayout.Name = "offsetsTableLayout";
+            this.offsetsTableLayout.RowCount = 2;
+            this.offsetsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.offsetsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.offsetsTableLayout.Size = new System.Drawing.Size(302, 193);
+            this.offsetsTableLayout.TabIndex = 0;
             // 
             // inputOffsetY
             // 
-            inputOffsetY.Dock = DockStyle.Fill;
-            inputOffsetY.Location = new Point(125, 32);
-            inputOffsetY.Margin = new Padding(4, 3, 4, 3);
-            inputOffsetY.Maximum = new decimal(new int[] { 4096, 0, 0, 0 });
-            inputOffsetY.Minimum = new decimal(new int[] { 4096, 0, 0, int.MinValue });
-            inputOffsetY.Name = "inputOffsetY";
-            inputOffsetY.Size = new Size(219, 23);
-            inputOffsetY.TabIndex = 4;
+            this.inputOffsetY.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputOffsetY.Location = new System.Drawing.Point(108, 29);
+            this.inputOffsetY.Maximum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+            this.inputOffsetY.Minimum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            -2147483648});
+            this.inputOffsetY.Name = "inputOffsetY";
+            this.inputOffsetY.Size = new System.Drawing.Size(191, 20);
+            this.inputOffsetY.TabIndex = 4;
             // 
             // yOffsetLabel
             // 
-            yOffsetLabel.AutoSize = true;
-            yOffsetLabel.Dock = DockStyle.Fill;
-            yOffsetLabel.Location = new Point(4, 29);
-            yOffsetLabel.Margin = new Padding(4, 0, 4, 0);
-            yOffsetLabel.Name = "yOffsetLabel";
-            yOffsetLabel.Size = new Size(113, 191);
-            yOffsetLabel.TabIndex = 2;
-            yOffsetLabel.Text = "Y:";
+            this.yOffsetLabel.AutoSize = true;
+            this.yOffsetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yOffsetLabel.Location = new System.Drawing.Point(3, 26);
+            this.yOffsetLabel.Name = "yOffsetLabel";
+            this.yOffsetLabel.Size = new System.Drawing.Size(99, 167);
+            this.yOffsetLabel.TabIndex = 2;
+            this.yOffsetLabel.Text = "Y:";
             // 
             // xOffSetLabel
             // 
-            xOffSetLabel.AutoSize = true;
-            xOffSetLabel.Dock = DockStyle.Fill;
-            xOffSetLabel.Location = new Point(4, 0);
-            xOffSetLabel.Margin = new Padding(4, 0, 4, 0);
-            xOffSetLabel.Name = "xOffSetLabel";
-            xOffSetLabel.Size = new Size(113, 29);
-            xOffSetLabel.TabIndex = 0;
-            xOffSetLabel.Text = "X:";
+            this.xOffSetLabel.AutoSize = true;
+            this.xOffSetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xOffSetLabel.Location = new System.Drawing.Point(3, 0);
+            this.xOffSetLabel.Name = "xOffSetLabel";
+            this.xOffSetLabel.Size = new System.Drawing.Size(99, 26);
+            this.xOffSetLabel.TabIndex = 0;
+            this.xOffSetLabel.Text = "X:";
             // 
             // inputOffsetX
             // 
-            inputOffsetX.Dock = DockStyle.Fill;
-            inputOffsetX.Location = new Point(125, 3);
-            inputOffsetX.Margin = new Padding(4, 3, 4, 3);
-            inputOffsetX.Maximum = new decimal(new int[] { 4096, 0, 0, 0 });
-            inputOffsetX.Minimum = new decimal(new int[] { 4096, 0, 0, int.MinValue });
-            inputOffsetX.Name = "inputOffsetX";
-            inputOffsetX.Size = new Size(219, 23);
-            inputOffsetX.TabIndex = 3;
+            this.inputOffsetX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inputOffsetX.Location = new System.Drawing.Point(108, 3);
+            this.inputOffsetX.Maximum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+            this.inputOffsetX.Minimum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            -2147483648});
+            this.inputOffsetX.Name = "inputOffsetX";
+            this.inputOffsetX.Size = new System.Drawing.Size(191, 20);
+            this.inputOffsetX.TabIndex = 3;
             // 
             // buttonsPanel
             // 
-            buttonsPanel.Controls.Add(stopButton);
-            buttonsPanel.Controls.Add(okButton);
-            buttonsPanel.Dock = DockStyle.Fill;
-            buttonsPanel.Location = new Point(3, 389);
-            buttonsPanel.Name = "buttonsPanel";
-            buttonsPanel.Size = new Size(374, 37);
-            buttonsPanel.TabIndex = 2;
+            this.buttonsPanel.Controls.Add(this.stopButton);
+            this.buttonsPanel.Controls.Add(this.okButton);
+            this.buttonsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonsPanel.Location = new System.Drawing.Point(3, 337);
+            this.buttonsPanel.Name = "buttonsPanel";
+            this.buttonsPanel.Size = new System.Drawing.Size(320, 32);
+            this.buttonsPanel.TabIndex = 2;
             // 
             // stopButton
             // 
-            stopButton.Dock = DockStyle.Right;
-            stopButton.Location = new Point(286, 0);
-            stopButton.Margin = new Padding(4, 3, 4, 3);
-            stopButton.Name = "stopButton";
-            stopButton.Size = new Size(88, 37);
-            stopButton.TabIndex = 4;
-            stopButton.Text = "Stop";
-            stopButton.UseVisualStyleBackColor = true;
-            stopButton.Click += stopButton_Click;
+            this.stopButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.stopButton.Location = new System.Drawing.Point(245, 0);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(75, 32);
+            this.stopButton.TabIndex = 4;
+            this.stopButton.Text = "Stop";
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += stopButton_Click;
             // 
             // okButton
             // 
-            okButton.Dock = DockStyle.Left;
-            okButton.Location = new Point(0, 0);
-            okButton.Margin = new Padding(4, 3, 4, 3);
-            okButton.Name = "okButton";
-            okButton.Size = new Size(88, 37);
-            okButton.TabIndex = 3;
-            okButton.Text = "Ok";
-            okButton.UseVisualStyleBackColor = true;
-            okButton.Click += okButton_Click;
+            this.okButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.okButton.Location = new System.Drawing.Point(0, 0);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 32);
+            this.okButton.TabIndex = 3;
+            this.okButton.Text = "Ok";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += okButton_Click;
             // 
             // trayIcon
             // 
-            trayIcon.ContextMenuStrip = trayContextMenu;
-            trayIcon.Text = "s";
-            trayIcon.Visible = true;
-            trayIcon.MouseDoubleClick += trayIcon_MouseDoubleClick;
+            this.trayIcon.ContextMenuStrip = this.trayContextMenu;
+            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Visible = true;
+            this.trayIcon.MouseDoubleClick += trayIcon_MouseDoubleClick;
             // 
             // trayContextMenu
             // 
-            trayContextMenu.Items.AddRange(new ToolStripItem[] { openFormMenuItem, exitMenuItem });
-            trayContextMenu.Name = "contextMenuStrip1";
-            trayContextMenu.Size = new Size(181, 48);
+            this.trayContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openFormMenuItem,
+            this.exitMenuItem});
+            this.trayContextMenu.Name = "contextMenuStrip1";
+            this.trayContextMenu.Size = new System.Drawing.Size(181, 70);
             // 
             // openFormMenuItem
             // 
-            openFormMenuItem.Name = "openFormMenuItem";
-            openFormMenuItem.Size = new Size(180, 22);
-            openFormMenuItem.Text = "Open Configuration";
-            openFormMenuItem.Click += openFormMenuItem_Click;
+            this.openFormMenuItem.Name = "openFormMenuItem";
+            this.openFormMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFormMenuItem.Text = "Open Configuration";
+            this.openFormMenuItem.Click += openFormMenuItem_Click;
             // 
             // exitMenuItem
             // 
-            exitMenuItem.Name = "exitMenuItem";
-            exitMenuItem.Size = new Size(180, 22);
-            exitMenuItem.Text = "Exit";
-            exitMenuItem.Click += exitMenuItem_Click;
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += exitMenuItem_Click;
             // 
             // ConfigForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(380, 429);
-            Controls.Add(rootLayout);
-            Margin = new Padding(4, 3, 4, 3);
-            Name = "ConfigForm";
-            Text = "Toaster";
-            rootLayout.ResumeLayout(false);
-            configGroupBox.ResumeLayout(false);
-            configTableLayout.ResumeLayout(false);
-            inputsTable.ResumeLayout(false);
-            inputsTable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)inputTimeout).EndInit();
-            offsetsGroupBox.ResumeLayout(false);
-            offsetsTableLayout.ResumeLayout(false);
-            offsetsTableLayout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)inputOffsetY).EndInit();
-            ((System.ComponentModel.ISupportInitialize)inputOffsetX).EndInit();
-            buttonsPanel.ResumeLayout(false);
-            trayContextMenu.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(326, 372);
+            this.Controls.Add(this.rootLayout);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.Name = "ConfigForm";
+            this.Text = "Toaster";
+            this.rootLayout.ResumeLayout(false);
+            this.configGroupBox.ResumeLayout(false);
+            this.configTableLayout.ResumeLayout(false);
+            this.inputsTable.ResumeLayout(false);
+            this.inputsTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputTimeout)).EndInit();
+            this.offsetsGroupBox.ResumeLayout(false);
+            this.offsetsTableLayout.ResumeLayout(false);
+            this.offsetsTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inputOffsetY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputOffsetX)).EndInit();
+            this.buttonsPanel.ResumeLayout(false);
+            this.trayContextMenu.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
