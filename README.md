@@ -25,7 +25,24 @@ Inspired by [notifications-at-top](https://github.com/SamarthCat/notifications-a
 
 # FAQ
 
-## This program has a high CPU usage!
+## Why am I getting this warning?! (And how can I circumvent it?)
+
+![SmartScreen warning](screenshots/SmartScreen.png)
+
+The short anwser is that I don't pay Microsoft money for a certificate.
+
+This is Windows's so called "SmartScreen".
+It attempts to protect you from running programs you got on the internet if they are not from a "Trusted Publisher".
+Since I'm not a "Trusted Publisher" (and becoming one might involve paying not-so-few money) this program is being flagged as untrusted.
+
+### Okay, but how can I run it then?
+
+When the SmartScreen is shown simply click on "More Info" and a button labeled "Run anyway" will appear.
+If you "run it anyway" Windows will remember your choice and should not bug you again about *this* specific executable.
+
+![SmartScreen: Run anyway](screenshots/SmartScreen_RunAnyway.png)
+
+## Why does this program use so much of my CPU?
 
 Try setting "Timeout" in the configuration to a higher value.
 
@@ -58,7 +75,7 @@ No.
 
 Or is it?
 You should not blindly trust a stranger on the internet.
-Neither your Anti Virus software as it's will have false negatives (or positives).
+Neither your Anti Virus software as there will always be false negatives (and false positives).
 If you really want to be sure then read the source code and compile it yourself.
 
 <!-- ;-)
