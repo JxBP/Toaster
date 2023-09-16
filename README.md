@@ -1,27 +1,27 @@
-<img alt="Toaster's icon" src="screenshots/toaster.png" width=50% height=50%>
+<p align="center">
+	<img alt="Toaster's icon" src="screenshots/toaster.png" width=50% height=50%>
+</p>
 
 # Toaster
 
-Put toast notifications where you want them.
+Put Windows toast notifications where you want them.
+
 Inspired by [notifications-at-top](https://github.com/SamarthCat/notifications-at-top).
 
 # Screenshots
 
 <details>
 	<summary>Windows 10</summary>
-	
 	<img alt="Screenshot of notfication on Windows 10 in the bottom left corner" src="screenshots/Win10/BottomLeft.png" />
 </details>
 
 <details>
 	<summary>Windows 11</summary>
-	
 	TODO
 </details>
 
 <details>
 	<summary>Configuration</summary>
-  
 	<img alt="Screenshot of the configuration window" src="screenshots/Configuration.png" />
 </details>
 
