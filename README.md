@@ -1,4 +1,4 @@
-![Logo](screenshots/toaster.png)
+<img alt="Toaster's icon" src="screenshots/toaster.png" width=50% height=50%>
 
 # Toaster
 
@@ -10,7 +10,7 @@ Inspired by [notifications-at-top](https://github.com/SamarthCat/notifications-a
 <details>
 	<summary>Windows 10</summary>
 	
-	![Windows 10, Bottom Left](screenshots/Win10/BottomLeft.png)
+	<img alt="Screenshot of notfication on Windows 10 in the bottom left corner" src="screenshots/Win10/BottomLeft.png" />
 </details>
 
 <details>
@@ -22,7 +22,7 @@ Inspired by [notifications-at-top](https://github.com/SamarthCat/notifications-a
 <details>
 	<summary>Configuration</summary>
   
-	![Configuration Window](screenshots/Configuration.png)
+	<img alt="Screenshot of the configuration window" src="screenshots/Configuration.png" />
 </details>
 
 # FAQ
