@@ -88,12 +88,17 @@ namespace Toaster
             Show();
             WindowState = FormWindowState.Normal;
             ShowInTaskbar = true;
+            FormBorderStyle = FormBorderStyle.Sizable;
         }
 
         private void hideInTray()
         {
             WindowState = FormWindowState.Minimized;
             ShowInTaskbar = false;
+
+            // Makes the config window a ToolWindow to avoid it showing up in some-
+            // shell replament programs
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
         }
 
     }
