@@ -8,6 +8,7 @@
             {
                 "en" => "New Notification",
                 "de" => "Neue Benachrichtigung",
+                "zh" => "新通知", // Traditional Chinese (Taiwan)
                 _ => null,
             };
         }

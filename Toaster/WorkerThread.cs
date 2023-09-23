@@ -8,7 +8,7 @@ namespace Toaster
 
     internal class WorkerThread
     {
-        [DllImport("user32.dll")]
+        [DllImport("user32.dll", EntryPoint = "FindWindowW", CharSet = CharSet.Unicode)]
         private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
         [StructLayout(LayoutKind.Sequential)]
