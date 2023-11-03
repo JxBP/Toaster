@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Toaster
 {
@@ -10,6 +11,9 @@ namespace Toaster
     {
         [DllImport("user32.dll", EntryPoint = "FindWindowW", CharSet = CharSet.Unicode)]
         private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll", EntryPoint = "FindWindowEx", CharSet = CharSet.Unicode)]
+        private static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr hWndChildAfter, string className, string windowTitle);
 
         [StructLayout(LayoutKind.Sequential)]
         public struct RECT
@@ -61,16 +65,26 @@ namespace Toaster
 
         private void Tick()
         {
-            var hWnd = FindWindow("Windows.UI.Core.CoreWindow", config.ToastTitle);
-            if (hWnd == IntPtr.Zero)
+            var hWndTeams = FindWindow("Chrome_WidgetWin_1", "Microsoft Teams Notification");
+            var hWndChrome = FindWindowEx(hWndTeams, IntPtr.Zero, "Chrome_RenderWidgetHostHWND", "Chrome Legacy Window");
+            if (hWndChrome != IntPtr.Zero)
             {
-                return;
+                MoveNotification(hWndTeams, config.Corner);
             }
 
+            var hWnd = FindWindow("Windows.UI.Core.CoreWindow", config.ToastTitle);
+            if (hWnd != IntPtr.Zero)
+            {
+                MoveNotification(hWnd, config.Corner);
+            }
+        }
+
+        private void MoveNotification(IntPtr hWnd, string corner)
+        {
             GetWindowRect(hWnd, out RECT rect);
             var screen = Screen.PrimaryScreen.Bounds;
 
-            switch (config.Corner)
+            switch (corner)
             {
                 case TopLeft:
                     MoveWindow(hWnd, 0, 0);
